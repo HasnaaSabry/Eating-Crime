@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Food Crime </title>
+    <link rel="stylesheet" type="text/css" href="css/sceneStyle.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/PasswordGamestyle.css"/>
+	<!-- Jquery -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/guessJS.js"></script>
+  <script src="js/envelops.js"></script>
+  </head>
+
+  <body id="page-top2" class="bg-secondary">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary  text-uppercase" text-align="center" id="mainNav">
+      <div class="col-lg-4 col-centered">
+        <img width="100" height="100" src="images/food.png" alt=""> Eating Crime
+      </div>
+    </nav>
+
+
+    <div class="container-fluid ">
+      <div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-1  itemsDiv">
+          <img class="img-fluid homePageColLeft" id="key_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="puzzle1_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="puzzle2_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="puzzle3_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="puzzle6_evid" src="images/mag.png" alt="">
+        </div>
+
+        <div class="col-sm-1 col-md-1 col-lg-1  itemsDiv">
+          <img class="img-fluid homePageColLeft" id="pepsi_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="puzzle_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="bagKey_evid" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="evidence4" src="images/mag.png" alt="">
+          <img class="img-fluid homePageColLeft" id="evidence4" src="images/mag.png" alt="">
+        </div>
+
+
+        <div id="sceneView" class="col-sm-8 col-md-8 col-lg-8 ">
+			  <img  id="room" src="images/room.jpg" alt="Map" usemap="room">
+
+        <map name="room">
+					<area id="laptop" alt="" title="" onclick="zoomLaptop()" coords="431,311,399,332,421,392,488,391,497,352,445,350" shape="poly">
+					<area id="bag" alt="" title="" onclick="zoomBag()" coords="140,310,100,334,100,354,118,361,153,338" shape="poly">
+					<area id="basket" alt="" title="" onclick="zoomBasket()" coords="297,366,265,361,232,368,242,432,286,433" shape="poly">
+					<area id="door" alt="" title="" onclick="zoomDoor()" coords="607,104,468,110,471,351,494,350,497,359,529,357,556,385,586,352,606,347" shape="poly">
+					<area id="timeline" alt="" title="" onclick="zoomTimeline()" coords="361,158,418,159,417,239,361,239" shape="poly">
+					<area id="puzzle1" alt="" title="" onclick="zoomPuzzle1()" coords="128,473,135,476,141,490,127,494" shape="poly">
+					<!--<area id="laptop" alt="" title="" onclick="zoomLaptop()" coords="484,337,448,361,473,426,546,421,556,382,500,382" shape="poly">-->
+				</map>
+			</img>
+
+
+			<img id="left" onclick="gotoRoom2()" src="images/left.png">
+
+			<div id="main_box">
+				<img id="character" src="images/inspector.png" alt="Eng Medhat"/>
+				<div class="box">
+					<span id="msg"/>
+				</div>
+			</div>
+
+
+			<img id="overlay" ></img>
+
+      <!-- ////////////////// for puzzle game /////////////////////// -->
+
+      <img id="overlay3" width="550" height="550"> </img>
+
+      <!-- /////////////////  password game ////////////////////// -->
+
+      <div id="wrapper">
+      	<div id="jcharacterfall">
+      		<div id="gamecontainer">
+      			<div id="waterfall"></div>
+      		</div>
+      	</div>
+      	<br class="break" />
+      	<div class="passDigit" id="d1">*</div><div class="passDigit" id="d2">*</div><div class="passDigit" id="d3">*</div>
+      	<div class="passDigit" id="d4">*</div><div class="passDigit" id="d5">*</div><div class="passDigit" id="d6">*</div>
+      	<div class="passDigit" id="d7">*</div><div class="passDigit" id="d8">*</div>
+      </div>
+      <img id="overlay4">
+
+      <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
+      <div id="card-wrapper" >
+          <div id="cardsContainer">
+            <img id="i1" class = "imgDesign" src="images/startAstrisc.png" onclick="loadimg('i1')">
+            <img id ="i2" class = "imgDesign" src="images/startAstrisc.png" onclick="loadimg('i2')">
+            <img id = "i3"  class = "imgDesign" src="images/startAstrisc.png" onclick="loadimg('i3')">
+            <img id = "i4" class="imgDesign" src="images/startAstrisc.png" onclick="loadimg('i4')">
+          </div>
+      </div>
+      <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+
+			<img id="back-btn1" onclick="backToRoom()" src="images/back.png">
+			<img id="overlay2" >
+			<img id="back-btn2" onclick="backToOverlay()" src="images/back.png">
+			</img>
+
+			<img  id="room2" src="images/room2.jpg" alt="Map" usemap="room2">
+				<map name="room2">
+					<area id="looker" alt="looker" title="" onclick="zoomLooker()" coords="169,213,247,387" shape="rect">
+					<area id="envelops" alt="envelops" title="" onclick="zoomEnvelops()" coords="644,233,716,229,713,394,641,371" shape="poly">
+					<!--<area id="laptop" alt="" title="" onclick="zoomLaptop()" coords="484,337,448,361,473,426,546,421,556,382,500,382" shape="poly">-->
+				</map>
+			</img>
+			<img id="right" onclick="gotoRoom1()" src="images/right.png">
+
+			<img id="overlayRoom2" >
+			</img>
+			<img id="back-btn1Room2" onclick="backToRoom2()" src="images/back.png">
+
+      <img id="puzzle1" src="images/locker_1.jpg" onclick="addPuzzle1ToEvidence()" >
+
+      <div id="calc_container">
+        <img id="overlay2Room2">
+      <div id="calc_screen"></div>
+      </div>
+
+			<img id="back-btn2Room2" onclick="backToOverlayRoom2()" src="images/back.png">
+			</img>
+      <img id="back-btnZoomGame" onclick="backFromZoom()" src="images/back.png">
+
+
+      <div id="memoryEnvelops">
+        <img id="bk" src="images/envelops.jpg">
+          <div id="memoryContainer">
+            <div>
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(0)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(1)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(2)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(3)">
+            </div>
+            <div >
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(4)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(5)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(6)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(7)">
+            </div>
+            <div >
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(8)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(9)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(10)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(11)">
+            </div>
+            <div >
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(12)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(13)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(14)">
+              <img class="puzImgs" src="images/pic.png" onclick="replaceImage(15)">
+            </div>
+      </div>
+    </div>
+
+        <img id="back-btn1Room2" onclick="backToRoom2()" src="images/back.png">
+        <img  id="roomsec" src="images/roomsec.jpg" alt="Map" usemap="roomsec">
+          <map name="roomsec">
+            <area id="desk" alt="desk" title="" onclick="zoomDesk()" coords="351,433,526,459,605,351,619,320,570,315,534,329,478,304,476,362" shape="poly"></area>
+          </map>
+        </img>
+        <img id="overlayRoomsec" >
+        </img>
+        <img id="back-btnToroomsec" onclick="backToRoomsec()" src="images/back.png">
+        <!--<img id="overlay2Roomsec">-->
+
+        <!-- Desktop security (video & folder)-->
+        <div>
+          <img src="images/desktop.jpg" id="secDesktop" usemap="#sec-lap-map">
+          <map name="sec-lap-map">
+            <area id="myBtn" alt="Recording time" title="Recording time"  onclick="showPop()" coords="71,78,116,135" shape="rect">
+            <area target="" alt="" title="" onclick="showGuess()" coords="136,79,177,124" shape="rect">
+          </map>
+          <div id="sec-pop-up">
+            <h3>Choose time to watch camera recording</h3>
+            <select onchange="playMovie(this)">
+              <option value="1">09:30 - 10:30</option>
+              <option value="1">10:30 - 12:00</option>
+              <option value="0">12:00 - 12:30</option>
+              <option value="1">12:30 - 01:30</option>
+            </select>
+          </div>
+          <div id="secVideo">
+            <img id="videoBackGround" src="images/video.jpg">
+            <img id="hishamVideo" class="videoCharacters" src="images/Hisham.png">
+            <img id="ibrahimVideo" class="videoCharacters" src="images/ibrahim.png">
+            <img id="imanVideo" class="videoCharacters" src="images/Iman.png">
+
+          </div>
+
+          <img id="backtodesktopV" onclick="backToDesktopV()" src="images/backsec.png">
+          <div id="GuessGame">
+            <FORM onSubmit="" NAME="guessquiz">
+              <CENTER>
+              <TABLE ALIGN="CENTER" BGCOLOR="#888888" BORDER="3" CELLPADDING="5">
+              <TR>
+              <TD BGCOLOR="#004080">
+              <FONT COLOR="#ffffff" FACE="Arial"><B>GUESS MY NUMBER (1 - 100)</B></FONT>
+              </TD>
+              </TR>
+              <TR>
+              <TD>
+              <CENTER>
+              <INPUT TYPE="text" NAME="prompt" SIZE="31" MAXLENGTH="40" VALUE="Guess my number (from 1 to 100)"><BR>
+              <INPUT TYPE="text" NAME="guess" SIZE="3" MAXLENGTH="3" VALUE="">
+              <INPUT TYPE="button" VALUE="Guess" onClick='process(guessme)'>
+              </CENTER>
+              </TD>
+              </TR>
+              </TABLE>
+              </CENTER>
+            </FORM>
+          </div>
+          <div id="codes-table">
+            <img src="images/lockerfolder.jpg">
+          </div>
+          <img id="backtodesktopF" onclick="backToDesktopF()" src="images/backsec.png">
+        </div>
+          </div>
+
+
+          <div class="col-sm-2 col-md-2 col-lg-2  itemsDiv">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus1" src="images/suspect.png" alt="">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus2" src="images/suspect2.png" alt="">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus3" src="images/suspect.png" alt="">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus4" src="images/suspect.png" alt="">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus5" src="images/suspect2.png" alt="">
+            <img class="img-fluid homePageColRight" width="90" height="100" id="sus6" src="images/suspect.png" alt="">
+        </div>
+        </div>
+
+      </div>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; Bassem, David, Esraa, Gehad, Hasnaa, Khaled, Yomna - JAVA38</small>
+      </div>
+    </div>
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top2">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- // ****************** Puzzle Script **********************//-->
+
+    <script  src="js/scenes.js" ></script>
+    <script src="/Users/gehad/Desktop/project-Gehad/js/snapfit.js"> </script>
+    <script>
+      var puzzleSolved = false;
+      function startPuzzle() //puzzle game
+      {
+
+        document.getElementById("room").style.display = "none";
+        document.getElementById("overlay3").style.display="block";
+        document.getElementById("back-btn1Room2").style.display="block";
+        document.getElementById("overlay3").src= "images/ital.jpg";
+        document.getElementById("left").style.display = "none";
+        document.getElementById("overlay2Room2").style.display = "none";
+        document.getElementById("overlay2").style.display = "none";
+        document.getElementById("overlayRoom2").style.display = "none";
+        document.getElementById("bk").style.display = "none";
+
+
+        document.getElementById("overlay3").onload = function()
+        {
+          snapfit.add(document.getElementById("overlay3"),{callback: function() {document.getElementById("puzzle_evid").src="images/ital.jpg";puzzleSolved = true;}, aborder:true, aimage:true, polygon:true, space:20});
+          snapfit.reset(document.getElementById("overlay3"),1);
+          snapfit.admix(document.getElementById("overlay3"));
+        };
+
+    }
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/passwordGameScript.js"></script>
+    <script type="text/javascript" src="js/lockerGameScript.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+
+  </body>
+
+</html>
