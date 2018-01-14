@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#calc_container{
+			position: relative;
+		}
+		#calc_screen{
+			position: absolute;
+			top: 15%;
+			left: 26%;
+			width: 15%;
+			height: 5%;
+			padding-left: 4%;
+			padding-top: 1%;
+			padding-bottom: 1%;
+			font-size: 300%;
+		}
+	</style>
+	<script type="text/javascript">
+		var counter=0;
+		var res = "";
+		var solved=false;
+		function SolvePass(key){
+			counter++;
+			if(counter<=4){
+				res += key;
+				document.getElementById("cal_screen").innerHTML=res;
+				if(counter==4){
+
+					if(res=="6438"){
+						solved=true;
+					}
+				}
+			}else{
+				document.getElementById("cal_screen").innerHTML="";
+				res="";
+				counter=0;
+			}
+		}
+	</script>
+</head>
+<body>
+<div id="calc_container">
+<img src="Keypad.jpg" usemap="#image-map">
+<div id="calc_screen"></div>
+</div>
+<map name="image-map">
+    <area target="" alt="1" title="1" onclick="SolvePass(1)" coords="332,202,395,280" shape="rect">
+    <area target="" alt="2" title="2" onclick="SolvePass(2)" coords="432,204,488,277" shape="rect">
+    <area target="" alt="3" title="3" onclick="SolvePass(3)" coords="525,205,582,279" shape="rect">
+    <area target="" alt="4" title="4" onclick="SolvePass(4)" coords="335,302,392,377" shape="rect">
+    <area target="" alt="5" title="5" onclick="SolvePass(5)" coords="433,303,488,377" shape="rect">
+    <area target="" alt="6" title="6" onclick="SolvePass(6)" coords="523,300,583,379" shape="rect">
+    <area target="" alt="7" title="7" onclick="SolvePass(7)" coords="332,404,393,477" shape="rect">
+    <area target="" alt="8" title="8" onclick="SolvePass(8)" coords="433,406,490,477" shape="rect">
+    <area target="" alt="9" title="9" onclick="SolvePass(9)" coords="523,403,583,480" shape="rect">
+    <area target="" alt="0" title="0" onclick="SolvePass(0)" coords="430,501,491,580" shape="rect">
+</map>
+</body>
+</html>

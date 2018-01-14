@@ -1,0 +1,214 @@
+      #sceneView{
+				//background-image: url("../images/room.jpg");
+				//background-repeat: no-repeat;
+				//background-size: 100% 100%;
+			}
+			#room2,#room,#roomsec,#secDesktop{
+				position: center;
+				margin:auto;
+				display:none;
+				//position: absolute;
+				//width:100%;
+				//height:100%;
+				//z-index: 2;
+			}
+			#room{
+				position: center;
+				margin:auto;
+				display:block;
+        display: none;
+			}
+			#overlay ,#overlay2,#overlay3,#overlay4,#overlayRoom2,#overlay2Room2{
+				position: center;
+				margin:auto;
+				display: none;
+				//width:100%;
+				//height:100%;
+				//z-index: 2;
+				//cursor: pointer;
+			}
+			 #back-btn1,#back-btn2,#back-btn1Room2,#back-btn2Room2,#back-btnToroomsec,#back-btnZoomGame{
+				display: none;
+				position: absolute;
+				bottom: 10%;
+				left: 10%;
+				width: 5%;
+				height: 5%;
+				border-radius: 5px;
+
+			}
+			#left{
+				display: none;
+				position: absolute;
+				bottom: 50%;
+				left: 10%;
+				width: 5%;
+				height: 5%;
+				border-radius: 5px;
+			}
+			#right{
+				display: none;
+				position: absolute;
+				bottom: 50%;
+				right: 10%;
+				width: 5%;
+				height: 5%;
+				border-radius: 5px;
+			}
+			area{
+				cursor: copy;
+			}
+			#main_box{
+				display: block;
+				position: absolute;
+				bottom: 10%;
+				left: 10%;
+				width: 50%;
+				height: 50%;
+				border-radius: 5px;
+			}
+			#character{
+				display:inline-block;
+				//position: absolute;
+				//bottom: 50%;
+				//left: 10%;
+				max-width:100px;
+				max-hight:100px;
+				float: left;
+			}
+			#lock,#puzzle1{
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				top:420px;
+				left: 320px;
+				display: none;
+			}
+			div.box {
+				display:inline-block;
+				float:left;
+				//bottom: 50%;
+				//left: 10%;
+				max-width:350px;
+				border-top-width: 4px;
+				border-bottom-width: 4px;
+				border-top-style: double;
+				border-bottom-style: double;
+				border-top-color: #E1A60A;
+				border-bottom-color: #E1A60A;
+			}
+/*///////////////////memory game//////////*/
+			#memoryEnvelops{
+				display: none;
+			}
+			#memoryContainer{
+				left: 22.5%;
+        top:10%;
+        position: absolute;
+        width: 50%;
+
+			}
+
+			#calc_container{
+				position: relative;
+	}
+			#calc_screen{
+				position: absolute;
+				top: 13%;
+				left: 40%;
+				width: 15%;
+				height: 5%;
+				padding-left: 4%;
+				padding-top: 1%;
+				padding-bottom: 1%;
+				font-size: 300%;
+			}
+
+			/* locker Game CSS */
+			#card-wrapper{
+
+				width: 864px;
+				height: 648px;
+				background-image: url("../images/passwordCardGame.jpg");
+				display: none;
+			}
+			#cardsContainer
+			{
+				width: 80%;
+				position: absolute;
+				top: 37%;
+					left: 23%;
+			}
+			.imgDesign{
+				display: inline-block;
+				width: 12%;
+				height: 13%;
+				margin-right: 8%;
+				border: 0;
+			}
+
+			.puzImgs{
+				height: 80px;
+				width: 60px;
+                margin-left: 10%;
+                margin-bottom: 13%;
+			}
+      #bk{
+        height: 600px;
+				width: 600px;
+        left: 15%;
+        top: .5%;
+        position: absolute;
+        }
+
+				#sec-pop-up{
+				display: none;
+				position: absolute;
+				top: 20%;
+				left: 12%;
+				background-color: white;
+				width: 30%;
+				height: 40%;
+				opacity: .9;
+				border-radius: 5%;
+				padding: 5%;
+			}
+			#secVideo{
+				display: none;
+				position: absolute;
+				top: 1%;
+			}
+			.videoCharacters{
+				display: none;
+				position: absolute;
+				left: 10px;
+				top: 150px;
+
+			}
+			#ibrahimVideo{
+				top: 200px;
+			}
+			#imanVideo{
+				top: 210px;
+			}
+			#GuessGame{
+				display: none;
+				position: absolute;
+				top: 10%;
+				left: 5%;
+			}
+			#codes-table{
+				display: none;
+				position: absolute;
+				top: 1%;
+				left: 1%;
+			}
+			#backtodesktopV,#backtodesktopF{
+				display: none;
+				position: absolute;
+				bottom: 10%;
+				left: 10%;
+				width: 5%;
+				height: 5%;
+				border-radius: 5px;
+			}
