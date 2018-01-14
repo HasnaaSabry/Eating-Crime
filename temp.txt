@@ -1,0 +1,83 @@
+function downBasket(){ //new
+				document.getElementById("overlay").style.display = "none";
+				document.getElementById("overlay2").style.display="block";
+				document.getElementById("back-btn2").style.display="block";
+				
+				if(!basket_pepsiCollected && !basket_paperCollected){
+					document.getElementById("overlay2").src= "images/basketdownall.jpg";
+					addMaptoBasketDown("563,312,536,337,547,348,550,359,550,367,558,385,577,392,592,382,620,365,607,346,612,334,607,322,576,329,574,320",
+					"510,338,477,347,497,403,511,423,549,391,531,380");
+				}else if(basket_pepsiCollected){
+					//document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+					document.getElementById("overlay2").src= "images/basketdownpaper.jpg";
+					addMaptoBasketDown("562,312,537,339,550,370,559,389,575,391,602,376,622,361,608,349,608,321,577,329");
+				}else if(basket_paperCollected){
+					//document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+					document.getElementById("overlay2").src= "images/basketdownpepsi.jpg";
+					addMaptoBasketDown("509,339,478,349,497,402,512,424,549,394,531,378");
+				}else if(basket_pepsiCollected && basket_paperCollected){
+					//document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+					document.getElementById("overlay2").src= "images/basketdownnothing.jpg";
+				}
+				
+			}
+			function addMaptoBasketDown(coords1,coords2){ //new
+				if(!basket_pepsiCollected && !basket_paperCollected){
+					document.getElementById("overlay2").useMap = "#myImageMap";
+					document.getElementById("left").style.display = "none";
+					
+					var myMap = document.createElement("map");
+					myMap.name = "myImageMap";
+					
+					var myArea = document.createElement("AREA");
+					myArea.coords=coords1;
+					myArea.shape="poly";
+					myArea.alt="basket";
+					//myArea.style.cursor="pointer";
+					myArea.onclick=function(){
+						alert("paper");
+						basket_paperCollected=true; 
+						document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+						document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[1]);
+					
+						downBasket();};
+					
+					myMap.appendChild(myArea);
+					
+					var myArea2 = document.createElement("AREA");
+					myArea2.coords=coords2;
+					myArea2.shape="poly";
+					myArea2.alt="basket";
+					//myArea2.style.cursor="pointer";
+					myArea2.onclick=function(){
+						basket_pepsiCollected=true;
+						document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+						document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[1]);
+						downBasket()};
+					
+					myMap.appendChild(myArea2);
+					document.getElementById("overlay2").appendChild(myMap);
+				}else{
+					document.getElementById("overlay2").useMap = "#myImageMap";
+					document.getElementById("left").style.display = "none";
+					
+					var myMap = document.createElement("map");
+					myMap.name = "myImageMap";
+					
+					var myArea = document.createElement("AREA");
+					myArea.coords=coords1;
+					myArea.shape="poly";
+					myArea.alt="basket";
+					//myArea.style.cursor="pointer";
+					myArea.onclick=function(){
+						if(basket_paperCollected)
+							basket_pepsiCollected;
+						else if(basket_pepsiCollected)
+							basket_paperCollected;
+							document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
+							downBasket()};
+					
+					myMap.appendChild(myArea);
+					document.getElementById("overlay2").appendChild(myMap);
+				}
+			}
