@@ -29,6 +29,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/guessJS.js"></script>
   <script src="js/envelops.js"></script>
+  <script type="text/javascript" src="js/scenes.js"></script>
   </head>
 
   <body id="page-top2" class="bg-secondary">
@@ -61,9 +62,9 @@
 
 
         <div id="sceneView" class="col-sm-8 col-md-8 col-lg-8 ">
-			  <img  id="room" src="images/room.jpg" alt="Map" usemap="room">
+			  <img  id="room" src="images/room.jpg" alt="Map" usemap="#room1">
 
-        <map name="room">
+        <map name="room1">
 					<area id="laptop" alt="" title="" onclick="zoomLaptop()" coords="431,311,399,332,421,392,488,391,497,352,445,350" shape="poly">
 					<area id="bag" alt="" title="" onclick="zoomBag()" coords="140,310,100,334,100,354,118,361,153,338" shape="poly">
 					<area id="basket" alt="" title="" onclick="zoomBasket()" coords="297,366,265,361,232,368,242,432,286,433" shape="poly">
@@ -273,7 +274,7 @@
     <!-- // ****************** Puzzle Script **********************//-->
 
     <script  src="js/scenes.js" ></script>
-    <script src="/Users/gehad/Desktop/project-Gehad/js/snapfit.js"> </script>
+    <script src="js/snapfit.js"> </script>
     <script>
       var puzzleSolved = false;
       function startPuzzle() //puzzle game
