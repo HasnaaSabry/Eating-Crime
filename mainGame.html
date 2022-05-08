@@ -26,10 +26,10 @@
     <link href="css/style.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="css/PasswordGamestyle.css"/>
 	<!-- Jquery -->
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/guessJS.js"></script>
   <script src="js/envelops.js"></script>
-  <script type="text/javascript" src="js/scenes.js"></script>
+  <!--<script type="text/javascript" src="js/scenes.js"></script>-->
   </head>
 
   <body id="page-top2" class="bg-secondary">
@@ -43,6 +43,7 @@
 
 
     <div class="container-fluid ">
+      <div class="img-title" text-align="center"> Evidinces </div>
       <div class="row">
         <div class="col-sm-1 col-md-1 col-lg-1  itemsDiv">
           <img class="img-fluid homePageColLeft" id="key_evid" src="images/mag.png" alt="">
@@ -124,7 +125,7 @@
 			<img id="back-btn2" onclick="backToOverlay()" src="images/back.png">
 			</img>
 
-			<img  id="room2" src="images/room2.jpg" alt="Map" usemap="room2">
+			<img  id="room2" src="images/room2.jpg" alt="Map" usemap="#room2">
 				<map name="room2">
 					<area id="looker" alt="looker" title="" onclick="zoomLooker()" coords="169,213,247,387" shape="rect">
 					<area id="envelops" alt="envelops" title="" onclick="zoomEnvelops()" coords="644,233,716,229,713,394,641,371" shape="poly">
@@ -180,7 +181,7 @@
     </div>
 
         <img id="back-btn1Room2" onclick="backToRoom2()" src="images/back.png">
-        <img  id="roomsec" src="images/roomsec.jpg" alt="Map" usemap="roomsec">
+        <img  id="roomsec" src="images/roomsec.jpg" alt="Map" usemap="#roomsec">
           <map name="roomsec">
             <area id="desk" alt="desk" title="" onclick="zoomDesk()" coords="351,433,526,459,605,351,619,320,570,315,534,329,478,304,476,362" shape="poly"></area>
           </map>
@@ -246,6 +247,7 @@
 
 
           <div class="col-sm-2 col-md-2 col-lg-2  itemsDiv">
+            <div class="img-title" text-align="center"> Suspects </div>
             <img class="img-fluid homePageColRight" width="90" height="100" id="sus1" src="images/suspect.png" alt="">
             <img class="img-fluid homePageColRight" width="90" height="100" id="sus2" src="images/suspect2.png" alt="">
             <img class="img-fluid homePageColRight" width="90" height="100" id="sus3" src="images/suspect.png" alt="">
