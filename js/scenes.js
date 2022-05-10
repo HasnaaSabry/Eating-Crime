@@ -631,6 +631,7 @@
 				if(memorySolved){
 					//document.getElementById("overlay2Room2").style.display="block";
 			 		//document.getElementById("overlay2Room2").src= "images/envelops2.jpg";
+					puzzleCollected++
 					document.getElementById("back-btn1Room2").style.display="block";
 					document.getElementById("overlayRoom2").removeChild(document.getElementById("overlayRoom2").childNodes[0]);
 			 	}
