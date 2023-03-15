@@ -31,17 +31,22 @@
 						document.getElementById("main_box").style.display = "none";
 						document.getElementById("room").style.display = "block";
 						document.getElementById("left").style.display = "block";
-					}, 3000);
+					}, 2000);
 				}
 
 			}
 
 			$(function () { //new
-				var str =  "Hi Esraa, seems like you are trying to help me in solving my case. "
+				var str =  "Hi , seems like you are trying to help me solve my case. "
 				+"let's find out who ate inside the room! "
 				+"try to collect the evidences in less than 10 minutes, otherwise you will have to pay 5LE . "
 				+"Remember, Time is Money . "
 				+"GO!" ;
+
+				///////////////////////////////////////////////////////////////////////////
+				// here just short message str="Hi" for making testing easier
+				// don't forget to change the number to longer time ex. 5000 in setTimeout()
+				/////////////////////////////////////////////////////////////////////////
 				var str="Hi";
 				showText("#msg", str, 0, 50);
 			});
@@ -177,6 +182,11 @@
 				}
 			}
 
+
+////////////////////////////////////////////
+////////  LAPTOP          /////////////////
+//////////////////////////////////////////
+
 			function zoomLaptop () { //done //gehad (put game, if he wins the fb screen will apper)
 				document.getElementById("room").style.display = "none";
 				document.getElementById("overlay").style.display="block";
@@ -216,6 +226,11 @@
 					document.getElementById("overlay2").style.display="none";
 				}
 			}
+
+
+////////////////////////////////////////////////////////////////////////
+///////////              BASKET                 ///////////////////////
+//////////////////////////////////////////////////////////////////////
 
 			function zoomBasket(){ //done
 			 	document.getElementById("room").style.display = "none";
@@ -322,6 +337,10 @@
 				//document.getElementById("overlay").removeChild(document.getElementById("overlay").childNodes[0]);
 			}
 
+			////////////////////////////////////////////////////////////////////////
+			////////////        DOOR                  /////////////////////////////
+			///////////////////////////////////////////////////////////////////////
+
 			function zoomDoor(){ //done
 				document.getElementById("room").style.display = "none";
 				document.getElementById("overlay").style.display="block";
@@ -373,6 +392,9 @@
 
 				}
 
+//////////////////////////////////////////////////////////////////////////////
+///////// TABLE                                       ///////////////////////
+////////////////////////////////////////////////////////////////////////////
 
 			function zoomTimeline(){
 				document.getElementById("room").style.display = "none";
@@ -467,6 +489,10 @@
 
 			}
 
+
+
+////// looker B with paper inside
+
 			function zoomLooker_1(){
 				document.getElementById("overlayRoom2").style.display = "none";
 				document.getElementById("overlay2Room2").style.display="block";
@@ -493,6 +519,8 @@
 				else
 			  	document.getElementById("overlay2Room2").src= "images/locker3.jpg";
 			}
+
+////// looker C with numbers
 
 			function zoomLooker_2(){
 				document.getElementById("overlayRoom2").style.display = "none";
