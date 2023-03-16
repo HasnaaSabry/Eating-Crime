@@ -318,7 +318,8 @@
 					document.getElementById("overlay2").removeChild(document.getElementById("overlay2").childNodes[0]);
 					basket_pepsi_paper_collected = 2;
 					document.getElementById("puzzle2_evid").src="images/Asset 3.png";
-					puzzleCollected++;
+					puzzleCollected++; ////////// paper in basket
+					alert("no.puzzle = " + puzzleCollected);
 					if(puzzleCollected==4)
 						startPuzzle();
 					downBasket3();
@@ -382,18 +383,20 @@
 				 	document.getElementById("overlay2").src= "images/neerDoor.jpg";
 
 					document.getElementById("overlay2").onclick=function(){
+						if(doorKeyFound==true){
 						if(document.getElementById("overlay").childNodes.length > 0)
 							document.getElementById("overlay").removeChild(document.getElementById("overlay").childNodes[0]);
 						document.getElementById("overlay2").style.display="none";
 						document.getElementById("back-btn2").style.display="none";
 						document.getElementById("back-btn1").style.display="none";
 						document.getElementById("roomsec").style.display="block"
+					}
 					};
 
 				}
 
 //////////////////////////////////////////////////////////////////////////////
-///////// TABLE                                       ///////////////////////
+///////// TIME TABLE                                       ///////////////////////
 ////////////////////////////////////////////////////////////////////////////
 
 			function zoomTimeline(){
@@ -407,6 +410,7 @@
 
 			function zoomPuzzle1(){
 				puzzleCollected++;
+				alert("no.puzzle = " + puzzleCollected);
 				document.getElementById("puzzle3_evid").src="images/Asset 3.png";
 
 				if(puzzleCollected==4)
@@ -508,7 +512,8 @@
 								document.getElementById("puzzle1_evid").src="images/Asset 3.png";
 								document.getElementById("overlay2Room2").src= "images/locker3.jpg";
 
-								puzzleCollected++;
+								puzzleCollected++; //// locker paper
+								alert("no.puzzle = " + puzzleCollected);
 								if(puzzleCollected==4&&foundInLocker==false)
 									startPuzzle();
 
@@ -659,9 +664,12 @@
 				if(memorySolved){
 					//document.getElementById("overlay2Room2").style.display="block";
 			 		//document.getElementById("overlay2Room2").src= "images/envelops2.jpg";
-					puzzleCollected++
+					puzzleCollected++; ///memory paper
+					alert("no.puzzle = " + puzzleCollected);
 					document.getElementById("back-btn1Room2").style.display="block";
 					document.getElementById("overlayRoom2").removeChild(document.getElementById("overlayRoom2").childNodes[0]);
+					if(puzzleCollected==4){
+						startPuzzle();}
 			 	}
 			 	else{
 			 		document.getElementById("memoryEnvelops").style.display="block";
