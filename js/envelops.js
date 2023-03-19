@@ -3,6 +3,7 @@
 				var used,gameOn,first_clicked,previous_pic,solvedPairs,counter;
 				var memorySolved = false;
 				var hiddenPics = new Array(16);
+				alert("call start_game");
 				start_game();
 				function shufflePics () {
 					var new_pic ;
@@ -56,7 +57,7 @@
 								gameOn=true;
 							}
 							else{
-								if(++solvedPairs==8)
+								if(++solvedPairs==1)
 								{ //player wins
 									memorySolved=true;
 									document.getElementById("memoryEnvelops").style.display="none";
@@ -74,9 +75,9 @@
 									myArea.alt="screen";
 									//myArea.style.cursor="pointer";
 									myArea.onclick=function(){
-										puzzleCollected++;
-										document.getElementById("puzzle6_evid").src="images/twopapers.png";
 
+										document.getElementById("puzzle6_evid").src="images/twopapers.png";
+										//puzzleCollected++;
 										if(puzzleCollected==4)
 										{
 											document.getElementById("overlayRoom2").style.display = "none";
@@ -89,9 +90,15 @@
 										}
 										else
 										{
+											alert("not 4 collected");
 											document.getElementById("overlayRoom2").style.display = "none";
 											document.getElementById("overlay2Room2").src= "images/enveloppaperEmpty.jpg";
-											document.getElementById("back-btn1Room2").style.display="block";
+											document.getElementById("overlay2Room2").style.display="block";
+
+											//document.getElementById("back-btn1Room2").style.display="block";
+
+											document.getElementById("back-btn2Room2").style.display="block";
+
 										}
 
 									};

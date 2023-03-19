@@ -17,7 +17,7 @@ function zoomBag(){ //done
     myArea.alt="screen";
     //myArea.style.cursor="pointer";
     myArea.onclick=function(){
-      if(bagKeyFound==true)
+      if(bagKeyFound!=true)
       {
         if(bag_ID_check_collected == 0)
           replaceBag_both();
